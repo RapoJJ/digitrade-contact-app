@@ -1,6 +1,3 @@
-<p>
-  contact-list works!
-</p>
-<div *ngFor="let contact of contacts">
-  {{contact.firstName}} {{contact.lastName}} {{contact.phone}}
+<div *ngFor="let c of contacts">
+  <dtca-contact-list-item [contact]="c"></dtca-contact-list-item>
 </div>
