@@ -5,7 +5,7 @@ export class Contact {
   email: string;
   address: IAddress;
 
-  constructor(firstName?: string, lastName?: string, phone?: string, email?: string, address?: IAddress) {
+  constructor(firstName?: string, lastName?: string, phone?: string, email?: string) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.phone = phone;
