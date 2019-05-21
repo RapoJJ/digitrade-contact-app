@@ -1,9 +1,62 @@
 <mat-card>
-  <mat-card-header>
-    <mat-card-title>Contact</mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
-  </mat-card-content>
-  <mat-card-actions>
-  </mat-card-actions>
+  <div fxLayout="row" fxLayoutAlign="center start">
+    <div fxLayout="column" class="width-detail">
+      <mat-form-field>
+        <label>
+          <input matInput [(ngModel)]="contact.firstName"
+                 type="text"
+                 required maxlength="12"
+                 placeholder="First name">
+        </label>
+      </mat-form-field>
+      <mat-form-field>
+        <label>
+          <input matInput [(ngModel)]="contact.lastName"
+                 type="text"
+                 required maxlength="12"
+                 placeholder="Last name">
+        </label>
+      </mat-form-field>
+      <mat-form-field>
+        <label>
+          <input matInput [(ngModel)]="contact.phone"
+                 type="text"
+                 required maxlength="10"
+                 placeholder="Phone">
+        </label>
+      </mat-form-field>
+      <mat-form-field>
+        <label>
+          <input matInput [(ngModel)]="contact.email"
+                 type="text"
+                 required maxlength="20"
+                 placeholder="Email address">
+        </label>
+      </mat-form-field>
+      <mat-form-field>
+        <label>
+          <input matInput [(ngModel)]="contact.address.street"
+                 type="text"
+                 required maxlength="15"
+                 placeholder="Street address">
+        </label>
+      </mat-form-field>
+      <mat-form-field>
+        <label>
+          <input matInput [(ngModel)]="contact.address.city"
+                 type="text"
+                 required maxlength="15"
+                 placeholder="City">
+        </label>
+      </mat-form-field>
+      <mat-form-field>
+        <label>
+          <input matInput [(ngModel)]="contact.address.postalCode"
+                 type="text"
+                 required maxlength="15"
+                 placeholder="Postal Code">
+        </label>
+      </mat-form-field>
+    </div>
+  </div>
 </mat-card>
