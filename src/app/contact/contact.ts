@@ -12,11 +12,11 @@ export class Contact {
     this.email = email;
     this.address = {};
   }
-  public setAddress(street, postalCode, city) {
+ /*public setAddress(street, postalCode, city) {
     this.address.street = street;
     this.address.city = city;
     this.address.postalCode = postalCode;
-  }
+  }*/
 }
 
 interface IAddress {
