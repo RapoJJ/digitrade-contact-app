@@ -22,7 +22,10 @@ export class ContactListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.contacts = this.contactService.get();
-    console.log(this.contacts);
+    /*this.contacts = this.contactService.get();
+    console.log(this.contacts);*/
+    this.contactService.get().subscribe((response => {
+      this.contacts = response;
+    }));
   }
 }

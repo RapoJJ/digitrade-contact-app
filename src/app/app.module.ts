@@ -9,6 +9,7 @@ import {ContactDetailComponent} from './contact/contact-detail/contact-detail.co
 import {MatButtonModule, MatCardModule, MatFormFieldModule, MatIconModule, MatInputModule} from '@angular/material';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     MatCardModule,
     MatInputModule,
     MatButtonModule,
