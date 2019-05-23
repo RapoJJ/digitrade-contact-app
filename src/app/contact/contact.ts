@@ -1,4 +1,5 @@
 export class Contact {
+  id: string;
   firstName: string;
   lastName: string;
   phone: string;
@@ -7,7 +8,10 @@ export class Contact {
   city: string;
   postalCode: string;
 
-  constructor(firstName?: string, lastName?: string, phone?: string, email?: string, street?: string, city?: string, postalCode?: string) {
+
+  constructor(id?: string, firstName?: string, lastName?: string, phone?: string,
+              email?: string, street?: string, city?: string, postalCode?: string) {
+    this.id = id;
     this.firstName = firstName;
     this.lastName = lastName;
     this.phone = phone;
@@ -17,11 +21,11 @@ export class Contact {
     this.postalCode = postalCode;
   }
 
- /*public setAddress(street, postalCode, city) {
-    this.address.street = street;
-    this.address.city = city;
-    this.address.postalCode = postalCode;
-  }*/
+  /*public setAddress(street, postalCode, city) {
+     this.address.street = street;
+     this.address.city = city;
+     this.address.postalCode = postalCode;
+   }*/
 }
 
 /*export interface IAddress {

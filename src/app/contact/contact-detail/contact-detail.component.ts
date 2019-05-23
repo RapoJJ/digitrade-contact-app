@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Contact} from '../contact';
 import {ActivatedRoute, Router} from '@angular/router';
-import {ContactService} from '../services/contact.service';
+import {ContactService} from '../../services/contact.service';
 
 @Component({
   selector: 'dtca-contact-detail',
@@ -10,14 +10,14 @@ import {ContactService} from '../services/contact.service';
 })
 export class ContactDetailComponent implements OnInit {
   contact: Contact;
-  contactId: any;
+  contactId: string;
 
   constructor(private router: Router, private route: ActivatedRoute, private contactService: ContactService) {
     this.contact = new Contact();
   }
 
   ngOnInit() {
-    this.contactId = this.route.snapshot.paramMap.get('id');
+    this.contactId = this.route.snapshot.params.id;
 
     this.contactService.getContactById(this.contactId).subscribe(response => {
       this.contact = response;

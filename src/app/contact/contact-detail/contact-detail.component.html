@@ -1,63 +1,61 @@
 <mat-card>
-  <div fxLayout="row" fxLayoutAlign="center start">
-    <div fxLayout="column" class="width-detail">
-      <mat-form-field>
-        <label>
-          <input matInput [(ngModel)]="contact.firstName"
-                 type="text"
-                 required
-                 placeholder="First name">
-        </label>
-      </mat-form-field>
-      <mat-form-field>
-        <label>
-          <input matInput [(ngModel)]="contact.lastName"
-                 type="text"
-                 required
-                 placeholder="Last name">
-        </label>
-      </mat-form-field>
-      <mat-form-field>
-        <label>
-          <input matInput [(ngModel)]="contact.phone"
-                 type="text"
-                 required maxlength="10"
-                 placeholder="Phone">
-        </label>
-      </mat-form-field>
-      <mat-form-field>
-        <label>
-          <input matInput [(ngModel)]="contact.email"
-                 type="text"
-                 required
-                 placeholder="Email address">
-        </label>
-      </mat-form-field>
-      <mat-form-field>
-        <label>
-          <input matInput [(ngModel)]="contact.street"
-                 type="text"
-                 required
-                 placeholder="Street address">
-        </label>
-      </mat-form-field>
-      <mat-form-field>
-        <label>
-          <input matInput [(ngModel)]="contact.city"
-                 type="text"
-                 required
-                 placeholder="City">
-        </label>
-      </mat-form-field>
-      <mat-form-field>
-        <label>
-          <input matInput [(ngModel)]="contact.postalCode"
-                 type="text"
-                 required
-                 placeholder="Postal Code">
-        </label>
-      </mat-form-field>
-    </div>
+  <div class="formContainer">
+    <mat-form-field>
+      <label>
+        <input matInput [(ngModel)]="contact.firstName"
+               type="text"
+               required
+               placeholder="First name">
+      </label>
+    </mat-form-field>
+    <mat-form-field>
+      <label>
+        <input matInput [(ngModel)]="contact.lastName"
+               type="text"
+               required
+               placeholder="Last name">
+      </label>
+    </mat-form-field>
+    <mat-form-field>
+      <label>
+        <input matInput [(ngModel)]="contact.phone"
+               type="text"
+               required maxlength="10"
+               placeholder="Phone">
+      </label>
+    </mat-form-field>
+    <mat-form-field>
+      <label>
+        <input matInput [(ngModel)]="contact.email"
+               type="text"
+               required
+               placeholder="Email address">
+      </label>
+    </mat-form-field>
+    <mat-form-field>
+      <label>
+        <input matInput [(ngModel)]="contact.street"
+               type="text"
+               required
+               placeholder="Street address">
+      </label>
+    </mat-form-field>
+    <mat-form-field>
+      <label>
+        <input matInput [(ngModel)]="contact.city"
+               type="text"
+               required
+               placeholder="City">
+      </label>
+    </mat-form-field>
+    <mat-form-field>
+      <label>
+        <input matInput [(ngModel)]="contact.postalCode"
+               type="text"
+               required
+               placeholder="Postal Code">
+      </label>
+    </mat-form-field>
   </div>
 </mat-card>
 <button mat-fab color="accent" class="fab-detail">

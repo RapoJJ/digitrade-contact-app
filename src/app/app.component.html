@@ -1,24 +1,34 @@
 <!--<dtca-contact-detail></dtca-contact-detail>-->
 <!--<dtca-contact-list></dtca-contact-list>-->
+<mat-sidenav-container class="dtca-sidenav-container">
+  <mat-sidenav #sidenav [mode]="'over'" [opened]="false" class="dtca-sidenav">
+    <!-- Sidenav content -->
+    <div>
+      <div fxLayout="column" fxLayoutAlign="center center" class="dtca-sidenav-user-area">
+        <div>
+          <mat-icon class="dtca-sidenav-avatar" color="primary">account_circle</mat-icon>
+        </div>
+        <div>
+          <span>Aku Ankka</span>
+        </div>
+        <a routerLink="/">
+          <mat-icon>navigate_before</mat-icon>
+        </a>
+      </div>
 
-
-<mat-toolbar color="primary">
-
-  <button mat-icon-button>
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span>Contacts</span>
-</mat-toolbar>
-
-<mat-sidenav-container>
-  <mat-sidenav>
-    <mat-nav-list>
-      <a></a>
-    </mat-nav-list>
+    </div>
   </mat-sidenav>
-
-  <mat-sidenav-content>
-    <p></p>
-  </mat-sidenav-content>
+  <div fxFlexFill class="dtca-sidenav-content">
+    <!-- App content -->
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon class="mat-18">menu</mat-icon>
+      </button>
+      <span>Contacts</span>
+    </mat-toolbar>
+    <div class="dtca-app-container">
+      <!-- App -->
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </mat-sidenav-container>
-<router-outlet></router-outlet>

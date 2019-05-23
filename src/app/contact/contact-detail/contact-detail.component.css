@@ -1,9 +1,23 @@
-.width-detail{
-  width: 300px;
+mat-card {
+  width: 80vw;
+  height: 90vh;
+  display: block;
+  margin: auto;
 }
 
 .fab-detail{
   position: fixed !important;
   bottom: 20px;
   right: 20px;
+}
+
+.formContainer{
+  display: inline-block;
+  margin: auto;
+}
+
+mat-form-field {
+  display: table-row;
+  margin-left: auto;
+  margin-right: auto;
 }
