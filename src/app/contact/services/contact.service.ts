@@ -7,7 +7,7 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class ContactService {
-  private contacts: Contact[];
+  // private contacts: Contact[];
 
   constructor(private contactHttpService: ContactHttpService) {
     /*this.contacts = [
@@ -25,5 +25,9 @@ export class ContactService {
   }*/
   get(): Observable<Contact []> {
     return this.contactHttpService.get();
+  }
+
+  getContactById(id): Observable<Contact> {
+    return this.contactHttpService.getById(id);
   }
 }

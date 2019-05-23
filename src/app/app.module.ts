@@ -19,6 +19,14 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
 import {AvatarModule} from 'ngx-avatar';
+import {RouterModule, Routes} from '@angular/router';
+
+const appRoutes: Routes = [
+  {path: 'contacts', component: ContactListComponent},
+  {path: 'contacts/new', component: ContactDetailComponent},
+  {path: 'contacts/:id', component: ContactDetailComponent},
+  {path: '', redirectTo: 'contacts', pathMatch: 'full'}
+];
 
 
 @NgModule({
@@ -43,7 +51,8 @@ import {AvatarModule} from 'ngx-avatar';
     MatChipsModule,
     AvatarModule,
     MatToolbarModule,
-    MatListModule
+    MatListModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
