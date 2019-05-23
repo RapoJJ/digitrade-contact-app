@@ -13,13 +13,14 @@ import {
   MatFormFieldModule,
   MatIconModule,
   MatInputModule, MatListModule,
-  MatMenuModule, MatToolbarModule
+  MatMenuModule, MatSidenavModule, MatToolbarModule
 } from '@angular/material';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
 import {AvatarModule} from 'ngx-avatar';
 import {RouterModule, Routes} from '@angular/router';
+import { ToolbarComponent } from './contact/toolbar/toolbar.component';
 
 const appRoutes: Routes = [
   {path: 'contacts', component: ContactListComponent},
@@ -34,7 +35,8 @@ const appRoutes: Routes = [
     AppComponent,
     ContactListComponent,
     ContactListItemComponent,
-    ContactDetailComponent
+    ContactDetailComponent,
+    ToolbarComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +54,8 @@ const appRoutes: Routes = [
     AvatarModule,
     MatToolbarModule,
     MatListModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
