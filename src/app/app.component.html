@@ -11,21 +11,13 @@
         <div>
           <span>Aku Ankka</span>
         </div>
-        <a routerLink="/">
-          <mat-icon>navigate_before</mat-icon>
-        </a>
       </div>
 
     </div>
   </mat-sidenav>
   <div fxFlexFill class="dtca-sidenav-content">
     <!-- App content -->
-    <mat-toolbar color="primary">
-      <button mat-icon-button (click)="sidenav.toggle()">
-        <mat-icon class="mat-18">menu</mat-icon>
-      </button>
-      <span>Contacts</span>
-    </mat-toolbar>
+    <dtca-toolbar (MenuClick)="sidenav.toggle()"></dtca-toolbar>
     <div class="dtca-app-container">
       <!-- App -->
       <router-outlet></router-outlet>

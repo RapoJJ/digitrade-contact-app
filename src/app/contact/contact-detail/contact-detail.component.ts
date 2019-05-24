@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Contact} from '../contact';
 import {ActivatedRoute, Router} from '@angular/router';
-import {ContactService} from '../../services/contact.service';
+import {ContactService} from '../services/contact.service';
+import {ToolbarService} from '../../layout/toolbar/toolbar.service';
+import {ToolbarOptions} from '../../layout/toolbar/toolbar-options';
+import {ToolbarAction} from '../../layout/toolbar/toolbar-action';
 
 @Component({
   selector: 'dtca-contact-detail',
@@ -10,19 +13,29 @@ import {ContactService} from '../../services/contact.service';
 })
 export class ContactDetailComponent implements OnInit {
   contact: Contact;
-  contactId: string;
+  contactId: number;
+  editingEnabled: boolean;
 
-  constructor(private router: Router, private route: ActivatedRoute, private contactService: ContactService) {
+  constructor(private router: Router, private route: ActivatedRoute,
+              private contactService: ContactService, private toolbar: ToolbarService) {
     this.contact = new Contact();
   }
 
   ngOnInit() {
     this.contactId = this.route.snapshot.params.id;
+    this.toolbar.setToolbarOptions(new ToolbarOptions(true, 'Contact',
+      [new ToolbarAction(this.onEdit(), 'edit')]));
 
-    this.contactService.getContactById(this.contactId).subscribe(response => {
-      this.contact = response;
-      console.log(this.contact);
-    });
+    if (isNaN(this.contactId)) {
+      console.log(this.contactId);
+    } else {
+      this.contactService.getContactById(this.contactId).subscribe(response => {
+        this.contact = response;
+      });
+    }
   }
 
+  onEdit() {
+    console.log('TODO');
+  }
 }

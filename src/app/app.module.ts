@@ -21,6 +21,9 @@ import {HttpClientModule} from '@angular/common/http';
 import {AvatarModule} from 'ngx-avatar';
 import {RouterModule, Routes} from '@angular/router';
 import { ToolbarComponent } from './layout/toolbar/toolbar.component';
+import {ContactService} from './contact/services/contact.service';
+import {ContactHttpService} from './contact/services/contact-http.service';
+import {ToolbarService} from './layout/toolbar/toolbar.service';
 
 const appRoutes: Routes = [
   {path: 'contacts', component: ContactListComponent},
@@ -57,7 +60,11 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     MatSidenavModule
   ],
-  providers: [],
+  providers: [
+    ContactService,
+    ContactHttpService,
+    ToolbarService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

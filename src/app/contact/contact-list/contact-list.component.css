@@ -1,12 +1,9 @@
-.dtca-contact-list {
-  margin-left: -16px;
-  margin-right: -16px;
-}
-
 mat-card {
   width: 80vw;
-  height: 90vh;
   margin: auto;
   display: block;
 
+}
+mat-nav-list {
+  padding: 0;
 }

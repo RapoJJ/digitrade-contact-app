@@ -7,7 +7,7 @@
 </mat-card>-->
 
 <mat-card>
-  <mat-nav-list class="dtca-contact-list">
+  <mat-nav-list>
     <dtca-contact-list-item
       *ngFor="let c of contacts"
       [contact]="c"
@@ -15,7 +15,9 @@
     ></dtca-contact-list-item>
   </mat-nav-list>
 </mat-card>
-<button mat-fab color="accent" class="dtca-fab">
+
+
+<button mat-fab class="dtca-fab" (click)="onCreateNew()">
   <mat-icon>add</mat-icon>
 </button>
 
