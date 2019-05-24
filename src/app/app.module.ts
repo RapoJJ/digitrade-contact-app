@@ -20,7 +20,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
 import {AvatarModule} from 'ngx-avatar';
 import {RouterModule, Routes} from '@angular/router';
-import { ToolbarComponent } from './contact/toolbar/toolbar.component';
+import { ToolbarComponent } from './layout/toolbar/toolbar.component';
 
 const appRoutes: Routes = [
   {path: 'contacts', component: ContactListComponent},
