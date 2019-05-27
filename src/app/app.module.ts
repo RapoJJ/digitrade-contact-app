@@ -13,7 +13,7 @@ import {
   MatFormFieldModule,
   MatIconModule,
   MatInputModule, MatListModule,
-  MatMenuModule, MatSidenavModule, MatToolbarModule
+  MatMenuModule, MatSidenavModule, MatSnackBarModule, MatToolbarModule
 } from '@angular/material';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -58,7 +58,8 @@ const appRoutes: Routes = [
     MatToolbarModule,
     MatListModule,
     RouterModule.forRoot(appRoutes),
-    MatSidenavModule
+    MatSidenavModule,
+    MatSnackBarModule
   ],
   providers: [
     ContactService,

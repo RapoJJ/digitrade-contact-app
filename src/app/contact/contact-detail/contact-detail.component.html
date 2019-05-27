@@ -59,6 +59,6 @@
   </div>
 </mat-card>
 
-<button mat-fab class="dtca-fab" *ngIf="contactId == null">
+<button *ngIf="editingEnabled" (click)="onSave()" mat-fab class="dtca-fab" >
   <mat-icon>check</mat-icon>
 </button>
