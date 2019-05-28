@@ -20,16 +20,6 @@ export class Contact {
     this.city = city;
     this.postalCode = postalCode;
   }
-
-  /*public setAddress(street, postalCode, city) {
-     this.address.street = street;
-     this.address.city = city;
-     this.address.postalCode = postalCode;
-   }*/
 }
 
-/*export interface IAddress {
-  street?: string;
-  postalCode?: string;
-  city?: string;
-}*/
+

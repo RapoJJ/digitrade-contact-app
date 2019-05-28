@@ -25,8 +25,6 @@ export class ContactDetailComponent implements OnInit {
 
   ngOnInit() {
     this.contactId = this.route.snapshot.params.id;
-    /*this.toolbar.setToolbarOptions(new ToolbarOptions(true, 'Contact',
-      [new ToolbarAction(this.onEdit(), 'edit')]));*/
     let toolbarActions: ToolbarAction[];
 
     if (isNaN(this.contactId)) {
@@ -53,13 +51,11 @@ export class ContactDetailComponent implements OnInit {
     this.editingEnabled = !this.editingEnabled;
 
     if (this.editingEnabled === true) {
-      console.log('Edit mode enabled');
       toolbarActions = [
       new ToolbarAction(this.onDelete.bind(this), 'delete'),
       new ToolbarAction(this.onEdit.bind(this), 'edit')
         ];
     } else {
-      console.log('Edit mode disabled');
       toolbarActions = [new ToolbarAction(this.onEdit.bind(this), 'edit')];
     }
     this.toolbar.setToolbarOptions((new ToolbarOptions(true, 'Edit Contact', toolbarActions)));
@@ -72,8 +68,8 @@ export class ContactDetailComponent implements OnInit {
     });
   }
 
-  onSave(): void { // Create contact
-    if (this.contactId == null) {
+  onSave(): void {
+    if (isNaN(this.contactId)) { // Create contact
       this.editingEnabled = false;
       this.contactService.createContact(this.contact).subscribe(response => {
         console.log(response);

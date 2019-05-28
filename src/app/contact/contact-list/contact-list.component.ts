@@ -20,14 +20,7 @@ export class ContactListComponent implements OnInit {
     this.selectedContact = '';
   }
 
-  /*onContactSelected(contact: Contact): void {
-    console.log(contact);
-    this.selectedContact = contact.firstName + ' ' + contact.lastName;
-  }*/
-
   ngOnInit() {
-    /*this.contacts = this.contactService.get();
-    console.log(this.contacts);*/
     this.toolbar.setToolbarOptions(new ToolbarOptions(false, 'Contacts',
       []));
 

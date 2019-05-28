@@ -7,22 +7,9 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class ContactService {
-  // private contacts: Contact[];
 
   constructor(private contactHttpService: ContactHttpService) {
-    /*this.contacts = [
-      new Contact('Aku', 'Ankka', '313'),
-      new Contact('Roope', 'Ankka', '999'),
-      new Contact('Taavi', 'Ankka', '123')
-    ];
-    this.contacts.push(new Contact('Hannu', 'Hanhi', '123123'));*/
   }
-  /*get(): Contact[] {
-    // return this.contacts;
-    console.log('service');
-    console.log(this.contactHttpService.get());
-    return [];
-  }*/
   get(): Observable<Contact []> {
     return this.contactHttpService.get();
   }
@@ -39,7 +26,7 @@ export class ContactService {
     return this.contactHttpService.post(contact);
   }
 
-  deleteContact(contact): Observable<Contact> {
+  deleteContact(contact): Observable<any> {
     return this.contactHttpService.delete(contact);
   }
 }
