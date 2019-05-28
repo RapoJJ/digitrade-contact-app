@@ -66,6 +66,9 @@ export class ContactDetailComponent implements OnInit {
     this.contactService.deleteContact(this.contact).subscribe(() => {
       this.router.navigate(['/contacts']);
     });
+    this.snackBar.open('Contact deleted!', 'Ok', {
+      duration: 1500
+    });
   }
 
   onSave(): void {
@@ -75,7 +78,7 @@ export class ContactDetailComponent implements OnInit {
         console.log(response);
         this.router.navigate(['/contacts']);
         this.snackBar.open('Contact created!', 'Ok', {
-          duration: 3000
+          duration: 1500
         });
     });
     } else { // Edit contact
@@ -83,7 +86,7 @@ export class ContactDetailComponent implements OnInit {
       this.contactService.updateContact(this.contact).subscribe( response => {
         this.contact = response;
         this.snackBar.open('Contact modified!', 'Ok', {
-          duration : 3000
+          duration : 1500
         });
       });
     }
