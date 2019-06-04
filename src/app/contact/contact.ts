@@ -21,5 +21,3 @@ export class Contact {
     this.postalCode = postalCode;
   }
 }
-
-
