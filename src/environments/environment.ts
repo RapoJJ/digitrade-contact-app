@@ -5,7 +5,7 @@
 
 export const environment = {
   production: false,
-  endpointUrl: 'https://localhost:44356/api/contacts'
+  endpointUrl: 'https://19contactapi.azurewebsites.net/api'
 };
 
 /*
